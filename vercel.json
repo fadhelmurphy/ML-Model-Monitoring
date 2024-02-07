@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "builds": [{ "src": "your_flask_app_file.py", "use": "@vercel/python" }],
+    "builds": [{ "src": "server.py", "use": "@vercel/python" }],
     "routes": [{ "src": "/(.*)", "dest": "/server.py" }],
     "env": { "FLASK_ENV": "production" }
   }
