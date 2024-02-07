@@ -1,18 +1,14 @@
 {
-    "version": 2,
-    "builds": [{ "src": "server.py", "use": "@vercel/python" }],
-    "routes": [{ "src": "/(.*)", "dest": "/server.py",
-    "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "OPTIONS",
-        "DELETE",
-        "HEAD",
-        "CONNECT",
-        "TRACE"
-    ] }],
-    "env": { "FLASK_ENV": "production" }
-  }
-  
+    "builds": [
+        {
+            "src": "api/app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "api/app.py"
+        }
+    ]
+}
