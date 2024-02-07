@@ -10,6 +10,10 @@ response = {
     'data': []
 }
 
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
 @app.post('/predict')
 def predict():
     try:
